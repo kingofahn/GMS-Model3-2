@@ -6,7 +6,7 @@
           <div class="col-xl-9 mx-auto">
             <h1 class="mb-5">  행복한 미래, 밝은 미래! 비트캠프 야놀자팀과 함께합시다! </h1>
           </div>
-          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+<!--           <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
             <form>
               <div class="form-row">
                 <div class="col-12 col-md-9 mb-2 mb-md-0">
@@ -17,7 +17,7 @@
                 </div>
               </div>
             </form>
-          </div>
+          </div> -->
         </div>
       </div>
     </header>

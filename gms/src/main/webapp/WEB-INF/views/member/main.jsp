@@ -1,42 +1,36 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> 
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 <!doctype html>
 <html lang="en">
-	<jsp:include page="../common/header.jsp"/>
+<head>
+<title>Home</title>
+	<link rel="shortcut icon" href="${ctx}/resources/img/ya.jpg" /> 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <link href="${ctx}/resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${ctx}/resources/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="${ctx}/resources/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+    <link href="${ctx}/resources/css/landing-page.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	
+	<script src="${ctx}/resources/js/app.js"></script>
+</head>	
+
 <body>
 <div id="wrapper">
-	<div id="header">
-		<jsp:include page="../common/header.jsp"/>
+ 	<div id="header">
+		<tiles:insertAttribute name="header"/>
 	</div> 
 	<div id="content">
-	이동페이지 : ${pagename}
-	<c:choose>
-	    <c:when test="${pagename eq 'add'}">
-	        <jsp:include page="add.jsp"/> 
-	    </c:when>
-	    <c:when test="${pagename eq 'login'}">
-	     	<jsp:include page="login.jsp"/>
-	    </c:when>
-	    <c:when test="${pagename eq 'search'}">
-	       <jsp:include page="search.jsp"/>
-	    </c:when>
-	    <c:when test="${pagename eq 'modify'}">
-	    	<jsp:include page="modify.jsp"/>	
-	    </c:when>
-	    <c:when test="${pagename eq 'remove'}">
-	    	<jsp:include page="remove.jsp"/>
-	    </c:when>
-	    <c:otherwise>
-	         <jsp:include page="retrieve.jsp"/>
-	    </c:otherwise>
-	</c:choose>
-
+		<tiles:insertAttribute name="content"/>
+	</div> 
 	<div id="footer">
-		 <jsp:include page="../common/footer.jsp"/>	
-	</div>
-</div></div>
+		<tiles:insertAttribute name="footer"/>
+	</div> 
+</div> 
 <script>
-	member.main('${ctx}');
-</script>	
+	app.init('${ctx}');
+</script>
 </body>
 </html>

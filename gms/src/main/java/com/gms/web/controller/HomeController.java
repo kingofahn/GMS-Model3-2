@@ -11,25 +11,26 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-/**
- * Handles requests for the application home page.
- */
 @Controller
+@SessionAttributes("ctx")
 public class HomeController {
 	static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Model model, HttpServletRequest request) {
+	public String home(HttpSession session, HttpServletRequest request) {
 		String  ctx = request.getContextPath();
-		logger.info("Welcome home! The client locale is {}.", ctx);
-		model.addAttribute("ctx", ctx);
+		logger.info("\n --------- Welcome {} !! ----------","Home");
+		session.setAttribute("ctx", ctx);
 		//model.addAttribute("context", "");
 		return "public:common/content.tiles";
 	}
-	@RequestMapping("/move/{dir}/{page}")
+	@RequestMapping("/move/{prefix}/{dir}/{page}")
 	public String move(
+			@PathVariable String prefix,
 			@PathVariable String dir,
 			@PathVariable String page) {
-		logger.info("HomeController : move() {}.", "ENTER");
-		return "public:"+dir+"/"+page+".tiles";
+		logger.info("\n --------- HomeController {} !!--------","move()");
+		String path = prefix+":"+dir+"/"+page+".tiles";
+		logger.info("\n move page >>> {}",path);
+		return path;
 	}
 }

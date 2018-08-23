@@ -9,9 +9,20 @@ app = {
 		onCreate : () =>{
 			console.log('step 3');
 			app.setContentView();
-			/*#join_btn, #admin_btn, #search_btn*/
-			$('#login_btn').click(()=>{   //ECMA6
-				location.href = app.x()+'/move/member/login';
+			$('#login_btn').click(()=>{   
+				location.href = app.x()+'/move/auth/member/login';
+			});
+			$('#join_btn').click(()=>{   
+				location.href = app.x()+'/move/auth/member/add';
+			});
+			$('#logout_btn').click(()=>{   
+				location.href = app.x()+'/member/logout';
+			});
+			$('#loginForm_btn').click(()=>{   
+				location.href = app.x()+'/member/login';
+			});
+			$('#joinForm_Btn').click(()=>{   
+				location.href = app.x()+'/member/login';
 			});
 		},
 		setContentView : ()=>{

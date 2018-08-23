@@ -57,6 +57,3 @@
 		</tr>
 	</table>
 </div>
-<script>
-	admin.main('${ctx}');
-</script>
