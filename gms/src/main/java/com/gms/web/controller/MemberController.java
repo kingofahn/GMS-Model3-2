@@ -28,3 +28,5 @@ public class MemberController {
 	public void fileUpload() {} 
 	
 }
+
+
