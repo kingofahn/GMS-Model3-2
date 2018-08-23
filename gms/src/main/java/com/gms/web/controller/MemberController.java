@@ -22,11 +22,6 @@ public class MemberController {
 	public void login() {}
 	@RequestMapping("/logout")
 	public void logout() {}
-	@RequestMapping("/move")
-	public void move() {}
 	@RequestMapping("/fileUpload")
 	public void fileUpload() {} 
-	
 }
-
-

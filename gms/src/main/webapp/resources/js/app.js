@@ -2,37 +2,27 @@
 var app  = app || {};
 app = {
 		init : x =>{
-			alert('step 1')
+			console.log('step 1')
 			app.session.context(x);  // 경로설정
 			app.onCreate();          // 생성자 느낌
 		},
 		onCreate : () =>{
-			alert('step 3')
+			console.log('step 3');
 			app.setContentView();
+			/*#join_btn, #admin_btn, #search_btn*/
+			$('#login_btn').click(()=>{   //ECMA6
+				location.href = app.x()+'/move/member/login';
+			});
 		},
 		setContentView : ()=>{
-			alert('step 4' + app.session.path('js'));
+			console.log('step 4' + app.session.path('ctx'));
 		}
 };
-		
-			/*$('#login_btn').on('click',function(){
-				alert('컨텍스트 : ' + x);
-			});
-			$('#join_btn').on('click',function(){
-				alert('컨텍스트 : ' + x);
-			});
-			$('#admin_btn').on('click',function(){
-				alert('컨텍스트 : ' + x);
-			}); 
-			$('#search_btn').on('click',function(){
-				alert('컨텍스트 : ' + x);
-			});*/ 
-
 
 app.session ={
 	context : x=> {
-		alert('step 2' + x)
-		sessionStorage.setItem('context',x);
+		console.log('step 2' + x)
+		sessionStorage.setItem('ctx',x);
 		sessionStorage.setItem('js',x+'/resources/js');
 		sessionStorage.setItem('cs',x+'/resources/css');
 		sessionStorage.setItem('img',x+'/resources/img');
@@ -40,4 +30,17 @@ app.session ={
 	path : x=> {
 		return sessionStorage.getItem(x);
 	}
+};
+
+app.x = ()=>{
+	return app.session.path('ctx');
+};
+app.j = ()=>{
+	return app.session.path('js');
+};
+app.c = ()=>{
+	return app.session.path('css');
+};
+app.i = ()=>{
+	return app.session.path('img');
 };
