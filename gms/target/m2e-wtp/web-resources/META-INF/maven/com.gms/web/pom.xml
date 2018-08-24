@@ -90,16 +90,6 @@
 		    <artifactId>spring-jdbc</artifactId>
 		    <version>${spring-version}</version>
 		</dependency>
-		<!-- Servlet VERSION -->
-		<!-- javax.servlet-api -->
-		
-		
-		<!-- JSP VERSION -->
-		<!-- jsp-api -->
-		
-		
-		<!-- JSTL VERSION -->
-		<!-- jstl -->
 		<!-- AspectJ -->
 		<dependency>
 			<groupId>org.aspectj</groupId>
