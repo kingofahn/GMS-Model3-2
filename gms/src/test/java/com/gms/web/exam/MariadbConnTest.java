@@ -9,8 +9,7 @@ public class MariadbConnTest {
 	@Test
 	public void test() {
 		MariadbConn m = new MariadbConn();
-		assertEquals("hong", m.exam());
-		fail("Not yet implemented");
+		assertEquals("A1", m.exam());
 	}
 
 }
