@@ -1,12 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-	<div id="content-box">
-		<table id="mypage-table">  
+<div id="content-box" style="width:80%; height:80%; margin: 50px auto; border: 1px solid grey;">
+	<table id="mypage-table">
 		<tr>
-			<td width="100" height="150" rowspan='3' colspan='2'>
-			<img width="300" height="150" src="${img}/upload/${image.imgname}.${image.extension}">
-			</td> 
+			<td  rowspan='3' colspan='2'>
+			<img width="300" height="150" src=""></td>
 			<td>아이디</td>
-			<td id="userid"> ${user.userid} </td>
+			<td id="userid">${user.userid}</td>
 		</tr>
 		<tr>
 			<td>이름</td>
@@ -29,13 +28,4 @@
 			<td>${user.roll}</td>
 		</tr>
 	</table>
-	<div id="mypage-bottom">
-		 <a id="myPageMoveToUpdate"> UPADATE FORM</a> 
-		 <a id="myPageMoveToDelete"> DELETE FORM </a> 
-		 <a id="logout">LOGOUT</a>
-	</div>
-	
-	</div>
-	<script>
-		member.main('${ctx}')
-	</script>
+</div>

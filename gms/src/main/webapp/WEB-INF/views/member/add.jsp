@@ -23,12 +23,6 @@
 			<option value="coddingZzang">코딩짱</option>
 			<option value="none" >없음</option>
 			</select><br>
-			
-<!-- 		<input type="radio" name="teamid" value="none" checked="checked" /> 없음
-			<input type="radio" name="teamid" value="nolja"/> 걍놀자
-			<input type="radio" name="teamid" value="jieunHouse"/> 지은하우스
-			<input type="radio" name="teamid" value="turtleKing"/> 거북왕
-			<input type="radio" name="teamid" value="coddingZzang"/> 코딩짱 -->
 			<div style="width: 410px; height:50px; font-size: 13px; border: 1px solid grey;">
 			<br>
 			<input type="checkbox" name="subject" value="java" checked="checked"/> Java
@@ -40,9 +34,8 @@
 			<input type="checkbox" name="subject" value="html"/> HTML
 			<input type="checkbox" name="subject" value="spring"/> Spring
 			</div>
-			<!-- <input id="joinForm_Btn" type="button" value="MEMBER JOIN"> -->
-			<a id="joinForm_Btn">
+ 			<a id="joinForm_Btn">
 				<img src="${ctx}/resources/img/join_btn.jpg">
-			</a>
+			</a> 
 		</form>
 		</div>

@@ -22,6 +22,9 @@
  	<div id="header">
 		<tiles:insertAttribute name="header"/>
 	</div> 
+ 	<div id="nav">
+		<tiles:insertAttribute name="nav"/>
+	</div> 
 	<div id="content">
 		<tiles:insertAttribute name="content"/>
 	</div> 

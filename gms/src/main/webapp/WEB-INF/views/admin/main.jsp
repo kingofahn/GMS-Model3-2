@@ -7,6 +7,9 @@
     <div id="header">
         <jsp:include page="../common/header.jsp"/>
     </div> 
+    <div id="nav">
+        <jsp:include page="../common/nav.jsp"/>
+    </div> 
     <div id="content">
         <jsp:include page="../member/search.jsp"/>
     </div> 

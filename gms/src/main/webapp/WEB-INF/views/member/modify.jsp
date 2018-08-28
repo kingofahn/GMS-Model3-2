@@ -1,12 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <div id="contentBox">
-			<form id="updateForm" name="updateForm">
+			<form id="modifyForm" name="modifyForm">
 				<table id="mypage-table">
 					<tr>
 						<td rowspan="3" colspan="2">
-						<img src="${img}/upload/${image.imgname}.${image.extension}">
-						${image.imgname}
-						${image.extension}
+						<img src="">
 						</td>
 						<td>ID</td>
 						<td>${user.userid}</td>
@@ -44,7 +42,7 @@
 							id="roll_5" name="roll" value="minfe" /> 민폐</td>
 					</tr>
 				</table>
-				<input type="button" id="updateConfirmBtn" value="Update!!!" />
+				<input type="button" id="modifyForm_btn" value="Update!!!" />
 			</form>
 </div>
 
@@ -53,7 +51,6 @@
   파일업로드: <input type="file" name="upfile"><br/>
   <input type="submit" value="파일업로드"> 
 </form>
-
 	<script>
 		var form = document.getElementById("updateForm");
 		var team = document.getElementById("teamid");
@@ -63,31 +60,9 @@
 			}
 		}
 		form.teamid.setAttribute("selected", "selected");
-
 		for (var i = 1; i <= 5; i++) {
 			if (document.getElementById('roll_' + i).value === '${user.roll}') {
 				document.getElementById('roll_' + i).checked = true;
 			}
 		}
-
-		document
-				.getElementById("updateConfirmBtn")
-				.addEventListener(
-						'click',
-						function() {
-							var x = service.nullChecker([
-									document.updateForm.password.value,
-									document.updateForm.teamid.value,
-									document.updateForm.roll.value]);
-							if (x.checker) {
-								form.action = "${ctx}/member.do";
-								form.method = "post"; /* get으로 하면 노출됨 */
-								var node = document.createElement('input');
-								node.innerHTML = '<input type="hidden" name="action" value="modify">'
-								form.appendChild(node);
-								form.submit();
-							} else {
-								alert(x.text);
-							}
-						});
-	</script>
+</script>

@@ -9,7 +9,7 @@ app = {
 		onCreate : () =>{
 			console.log('step 3');
 			app.setContentView();
-			$('#login_btn').click(()=>{   
+			$('#login_btn').click(()=>{
 				location.href = app.x()+'/move/auth/member/login';
 			});
 			$('#join_btn').click(()=>{   
@@ -18,12 +18,24 @@ app = {
 			$('#logout_btn').click(()=>{   
 				location.href = app.x()+'/member/logout';
 			});
-			$('#loginForm_btn').click(()=>{   
-				location.href = app.x()+'/member/login';
+			$('#modify_btn').click(()=>{   
+				location.href = app.x()+'/member/modify';
 			});
-			$('#joinForm_Btn').click(()=>{   
-				location.href = app.x()+'/member/login';
+			$('#remove_btn').click(()=>{   
+				location.href = app.x()+'/member/remove';
 			});
+			$('#loginForm_btn').click(()=>{
+				$('#userLoginForm').attr({action:app.x()+"/member/login", method:"POST"}).submit();
+            });
+			$('#modifyForm_btn').click(()=>{
+				$('#modifyForm').attr({action:app.x()+"/member/modify", method:"POST"}).submit();
+            });
+			$('#removeForm_btn').click(()=>{
+				$('#removeForm').attr({action:app.x()+"/member/remove", method:"POST"}).submit();
+            });	
+			$('#joinForm_Btn').click(()=>{
+                $('#joinForm').attr({action:app.x()+"/member/add", method:"POST"}).submit();
+            });
 		},
 		setContentView : ()=>{
 			console.log('step 4' + app.session.path('ctx'));

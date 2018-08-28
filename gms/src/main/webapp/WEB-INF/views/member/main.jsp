@@ -24,9 +24,9 @@
 	</div> 
 	<div id="content">
 		<tiles:insertAttribute name="content"/>
-	</div> 
-	<div id="footer">
-		<tiles:insertAttribute name="footer"/>
+	</div>
+	<div id="mypage">
+		<tiles:insertAttribute name="mypage"/>
 	</div> 
 </div> 
 <script>
