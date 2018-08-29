@@ -21,6 +21,5 @@
 <script>
 	member.main('${ctx}');
 </script>
-
 </body>
 </html>

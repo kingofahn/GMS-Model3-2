@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<div id="contentBox">
+<div id="content-box" style="width:410px; margin: auto; border: 1px solid grey;">
 			<form id="modifyForm" name="modifyForm">
 				<table id="mypage-table">
 					<tr>
@@ -44,13 +44,13 @@
 				</table>
 				<input type="button" id="modifyForm_btn" value="Update!!!" />
 			</form>
+			<form method="POST" class="TEST" enctype="multipart/form-data" 
+					action="${ctx}/member.do?action=fileupload&page=retrieve">
+			  파일업로드: <input type="file" name="upfile"><br/>
+			  <input type="submit" value="파일업로드"> 
+			</form>
 </div>
 
-<form method="POST" class="TEST" enctype="multipart/form-data" 
-		action="${ctx}/member.do?action=fileupload&page=retrieve">
-  파일업로드: <input type="file" name="upfile"><br/>
-  <input type="submit" value="파일업로드"> 
-</form>
 	<script>
 		var form = document.getElementById("updateForm");
 		var team = document.getElementById("teamid");

@@ -11,29 +11,39 @@
 		<put-attribute name="nav" value="/WEB-INF/views/common/nav.jsp"/>
 		<put-attribute name="content" value=""/>
 		<put-attribute name="footer" value="/WEB-INF/views/common/footer.jsp"/>
-		<put-attribute name="mypage" value=""/>
 	</definition>
 	<definition name="public:*/*.tiles" extends="public">
 		<put-attribute name="content" value="/WEB-INF/views/{1}/{2}.jsp"/>
 	</definition>
-	
+
 	<!-- auth -->
 	<definition name="auth:*/*.tiles" extends="public">
-		<put-attribute name="header" value="/WEB-INF/views/common/header.jsp"/>
 		<put-attribute name="content" value="/WEB-INF/views/{1}/{2}.jsp"/>
 	</definition>
 
 	<!-- login__success -->	
-	<definition name="login__success" extends="public">
+	<definition name="login_success" extends="public">
+		<put-attribute name="nav" value="/WEB-INF/views/member/auth.jsp"/>
+		<put-attribute name="content" value="/WEB-INF/views/member/retrieve.jsp"/>
+	</definition>
+	<!-- login__fail -->
+	<definition name="login_page" extends="public">
+		<put-attribute name="header" value="/WEB-INF/views/common/header.jsp"/>
+		<put-attribute name="content" value="/WEB-INF/views/member/login.jsp"/>
+	</definition>
+	<!-- modify -->
+	<definition name="modify_page" extends="public">
+		<put-attribute name="nav" value="/WEB-INF/views/member/auth.jsp"/>
+		<put-attribute name="content" value="/WEB-INF/views/member/modify.jsp"/>
+	</definition>
+	<!-- remove -->	
+	<definition name="remove_page" extends="public">
+		<put-attribute name="nav" value="/WEB-INF/views/member/auth.jsp"/>
+		<put-attribute name="content" value="/WEB-INF/views/member/remove.jsp"/>
+	</definition>
+		<definition name="retrieve_page" extends="public">
 		<put-attribute name="nav" value="/WEB-INF/views/member/auth.jsp"/>
 		<put-attribute name="content" value="/WEB-INF/views/member/retrieve.jsp"/>
 		<put-attribute name="footer" value=""/>
 	</definition>
-	
-	<!-- login__fail -->
-	<definition name="login__page" extends="public">
-		<put-attribute name="header" value="/WEB-INF/views/common/header.jsp"/>
-		<put-attribute name="content" value="/WEB-INF/views/member/login.jsp"/>
-	</definition>
-	
 </tiles-definitions>

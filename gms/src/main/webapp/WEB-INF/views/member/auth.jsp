@@ -19,11 +19,10 @@
                 <i class="icon-layers m-auto text-primary"></i>
               </div>
 	              <h3> 회원 수정 </h3>
-              <p class="lead mb-0"> ${user.name}님의 개인정보를 <br> 수정하세요<br>
+              <p class="lead mb-0"> ${user.userid}님의 개인정보를 <br> 수정하세요<br>
               						</p>
             </div>
           </div>
-          
           <div class="col-lg-4" id="remove_btn">
             <div class="features-icons-item mx-auto mb-0 mb-lg-3">
               <div class="features-icons-icon d-flex">
@@ -37,3 +36,7 @@
         </div>
       </div>
     </section>
+<script>
+	app.setUser({userid : '${user.userid}'});
+</script> 
+    

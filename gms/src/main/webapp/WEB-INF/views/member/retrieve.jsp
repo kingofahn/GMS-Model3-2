@@ -1,11 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<div id="content-box" style="width:80%; height:80%; margin: 50px auto; border: 1px solid grey;">
-	<table id="mypage-table">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<div id="content-box">
+	<table id="mypage-table" style="width:410px; height:300px; margin:auto; border: 1px solid grey;">
 		<tr>
-			<td  rowspan='3' colspan='2'>
-			<img width="300" height="150" src=""></td>
+			<td  rowspan='4' colspan='2'>
+			<img src=""></td>
 			<td>아이디</td>
-			<td id="userid">${user.userid}</td>
+			<td>${user.userid}</td>
+		</tr>
+	<tr>
+			<td>이메일</td>
+			<td colspan='2'>${user.email}</td>
 		</tr>
 		<tr>
 			<td>이름</td>
@@ -13,7 +18,7 @@
 		</tr>
 		<tr>
 			<td>비밀번호</td>
-			<td colspan='2'>************</td>
+			<td colspan='2' >************</td>
 		</tr>
 		<tr>
 			<td>나이</td>
