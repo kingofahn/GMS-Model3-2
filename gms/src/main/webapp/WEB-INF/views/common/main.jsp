@@ -34,9 +34,7 @@
 </div> 
 <script>
 	app.init('${ctx}');
+	app.setUser({userid : '${user.userid}'});
 </script>
 </body>
 </html>
-
-
-

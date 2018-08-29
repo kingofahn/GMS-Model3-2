@@ -16,5 +16,6 @@ public class MemberDTO {
 			gender, 
 			subject,
 			email,
-			profile;
+			profile,
+			phone;
 }

@@ -18,8 +18,8 @@
   </select>
   
   <insert id="add">
-	INSERT INTO MEMBER (USERID, SSN, NAME, ROLL, TEAMID, PASSWORD, AGE, GENDER, SUBJECT, EMAIL)
-	VALUES (#{userid}, #{ssn}, #{name}, #{roll}, #{teamid}, #{password}, #{age}, #{gender}, #{subject}, #{email});
+	INSERT INTO MEMBER (USERID, SSN, NAME, ROLL, TEAMID, PASSWORD, AGE, GENDER, SUBJECT, EMAIL, PHONE)
+	VALUES (#{userid}, #{ssn}, #{name}, #{roll}, #{teamid}, #{password}, #{age}, #{gender}, #{subject}, #{email}, #{phone});
   </insert>
   
   <update id="modify">

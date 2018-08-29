@@ -8,16 +8,16 @@ app = {
 		},
 		setUser : x=>{
 			sessionStorage.setItem('userid',x.userid);
-			alert('setUser 성공'+ app.userid()); 
+			alert('app.userid() : '+ app.userid()); 
 		},
 		onCreate : () =>{
 			console.log('step 3');
 			app.setContentView();
 			$('#login_btn').click(()=>{
-				location.href = app.x()+'/move/auth/member/login';
+				location.href = app.x()+'/move/public/member/login';
 			});
 			$('#join_btn').click(()=>{   
-				location.href = app.x()+'/move/auth/member/add';
+				location.href = app.x()+'/move/public/member/add';
 			});
 			$('#logout_btn').click(()=>{   
 				location.href = app.x()+'/member/logout';
@@ -25,12 +25,10 @@ app = {
 			$('#modify_btn').click(()=>{
 				alert('app.userid()'+ app.userid());
 				location.href = app.x()+'/move/auth/member/modify';
-/*				location.href = app.x()+'/member/retrieve/'+app.userid()+'/modify';*/
 			});
 			$('#remove_btn').click(()=>{   
 				alert('app.userid()'+ app.userid());
 				location.href = app.x()+'/move/auth/member/remove';
-				/*location.href = app.x()+'/member/retrieve/'+app.userid()+'/remove/';*/
 			});
 			$('#loginForm_btn').click(()=>{
 				$('#userLoginForm').attr({action:app.x()+"/member/login", method:"POST"}).submit();
@@ -106,6 +104,3 @@ app.age = ()=>{
 app.subject = ()=>{
 	return sessionStorage.getItem('subject');
 };*/
-
-
-

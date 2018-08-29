@@ -35,8 +35,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>    
 <script>
 	app.setUser({userid : '${user.userid}'});
-</script> 
-    
+</script>

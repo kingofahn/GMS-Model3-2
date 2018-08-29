@@ -4,6 +4,7 @@
 			<input type="text" name="userid" placeholder="아이디를 입력해주세요" style="font-size: 15px; width: 410px; height:50px; text-align: center;"/> <br>
 			<input type="text" name="email" placeholder="이메일을 입력해주세요" style="font-size: 15px; width: 410px; height:50px; text-align: center;"/> <br>
 			<input type="text" name="name" placeholder="이름을 입력해주세요" style="font-size: 15px; width: 410px; height:50px; text-align: center;" /> <br>
+			<input type="text" name="phone" placeholder="전화번호를 입력해주세요" style="font-size: 15px; width: 410px; height:50px; text-align: center;" /> <br>
 			<input type="password" name="password" placeholder="비밀번호를 입력해주세요(8~20자)" style="font-size: 15px; width: 410px; height:50px; text-align: center;"/>	<br>
 			<input type="text" name="ssn" placeholder="생년월일을 입력해주세요(ex900115-1)" style="font-size: 15px; width: 410px; height:50px; text-align: center;"/><br>
 

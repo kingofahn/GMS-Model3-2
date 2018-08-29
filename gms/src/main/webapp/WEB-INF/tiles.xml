@@ -12,12 +12,14 @@
 		<put-attribute name="content" value=""/>
 		<put-attribute name="footer" value="/WEB-INF/views/common/footer.jsp"/>
 	</definition>
+	
 	<definition name="public:*/*.tiles" extends="public">
 		<put-attribute name="content" value="/WEB-INF/views/{1}/{2}.jsp"/>
 	</definition>
-
+	
 	<!-- auth -->
 	<definition name="auth:*/*.tiles" extends="public">
+	<put-attribute name="nav" value="/WEB-INF/views/member/auth.jsp"/>
 		<put-attribute name="content" value="/WEB-INF/views/{1}/{2}.jsp"/>
 	</definition>
 

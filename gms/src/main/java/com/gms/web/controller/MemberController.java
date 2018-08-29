@@ -60,7 +60,6 @@ public class MemberController {
 		logger.info("\n --------- MemberController {} !!--------","login");
 		String flag = "";
 		boolean b = memberService.login(member);
-
 		if(b==true) {
 			flag = "login_success";
 			model.addAttribute("user", memberService.retrieve(member));
