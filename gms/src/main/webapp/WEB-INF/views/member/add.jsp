@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 	<div id="contentBox">
 		<form id = "joinForm" name="joinForm" style="width: 450px;margin:50px auto">
-			<input type="text" name="userid" placeholder="아이디를 입력해주세요" style="font-size: 15px; width: 410px; height:50px; text-align: center;"/> <br>
-			<input type="text" name="email" placeholder="이메일을 입력해주세요" style="font-size: 15px; width: 410px; height:50px; text-align: center;"/> <br>
-			<input type="text" name="name" placeholder="이름을 입력해주세요" style="font-size: 15px; width: 410px; height:50px; text-align: center;" /> <br>
-			<input type="text" name="phone" placeholder="전화번호를 입력해주세요" style="font-size: 15px; width: 410px; height:50px; text-align: center;" /> <br>
-			<input type="password" name="password" placeholder="비밀번호를 입력해주세요(8~20자)" style="font-size: 15px; width: 410px; height:50px; text-align: center;"/>	<br>
-			<input type="text" name="ssn" placeholder="생년월일을 입력해주세요(ex900115-1)" style="font-size: 15px; width: 410px; height:50px; text-align: center;"/><br>
+			<input type="text" name="userid" placeholder="아이디를 입력해주세요" required="required" style="font-size: 15px; width: 410px; height:50px; text-align: center;"/> <br>
+			<input type="text" name="email" placeholder="이메일을 입력해주세요" required="required" style="font-size: 15px; width: 410px; height:50px; text-align: center;"/> <br>
+			<input type="text" name="name" placeholder="이름을 입력해주세요" required="required" style="font-size: 15px; width: 410px; height:50px; text-align: center;" /> <br>
+			<input type="text" name="phone" placeholder="전화번호를 입력해주세요" required="required" style="font-size: 15px; width: 410px; height:50px; text-align: center;" /> <br>
+			<input type="password" name="password" placeholder="비밀번호를 입력해주세요(8~20자)" required="required" style="font-size: 15px; width: 410px; height:50px; text-align: center;"/>	<br>
+			<input type="text" name="ssn" placeholder="생년월일을 입력해주세요(ex900115-1)" required="required" style="font-size: 15px; width: 410px; height:50px; text-align: center;"/><br>
 
 			<select name="roll" id="roll" style="font-size: 15px; width: 410px; height:50px">
 			<option value="none">역할을 선택해주세요</option>

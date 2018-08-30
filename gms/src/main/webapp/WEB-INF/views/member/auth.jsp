@@ -3,13 +3,15 @@
     <section class="features-icons bg-light text-center">
       <div class="container">
         <div class="row">
-          <div class="col-lg-4" id="logout_btn">
+          
+          <div class="col-lg-4" id="mypage_btn">
             <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
               <div class="features-icons-icon d-flex">
-                <i class="icon-screen-desktop m-auto text-primary"></i>
-   			  </div>
-            	  <h3> 로그아웃</h3>
-              <p class="lead mb-0"> ${user.name} 님 로그아웃하여 <br>서비스를 종료하세요</p>
+                <i class="icon-layers m-auto text-primary"></i>
+              </div>
+	              <h3> 마이페이지 </h3>
+              <p class="lead mb-0"> ${user.name}님의 마이페이지 입니다.<br>
+              						</p>
             </div>
           </div>
           
@@ -23,6 +25,17 @@
               						</p>
             </div>
           </div>
+          
+          <div class="col-lg-4" id="logout_btn">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="icon-screen-desktop m-auto text-primary"></i>
+   			  </div>
+            	  <h3> 로그아웃</h3>
+              <p class="lead mb-0"> ${user.name} 님 로그아웃하여 <br>서비스를 종료하세요</p>
+            </div>
+          </div>
+          
           <div class="col-lg-4" id="remove_btn">
             <div class="features-icons-item mx-auto mb-0 mb-lg-3">
               <div class="features-icons-icon d-flex">
@@ -35,7 +48,18 @@
           </div>
         </div>
       </div>
-    </section>    
+    </section>
+    
 <script>
-	app.setUser({userid : '${user.userid}'});
+ 	user.session({userid : '${user.userid}',
+	  		      teamid:"${user.teamid}",
+			      name:"${user.name}",
+			      ssn:"${user.ssn}",
+			      roll:"${user.roll}",
+			      password:"${user.password}",
+			      age:"${user.age}",
+			      gender:"${user.gender}",
+			      phone:"${user.phone}",
+			      subject:"${user.subject}"
+				});
 </script>

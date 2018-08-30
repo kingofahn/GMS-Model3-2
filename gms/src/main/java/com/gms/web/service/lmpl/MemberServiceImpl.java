@@ -9,11 +9,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.gms.web.domain.MemberDTO;
-import com.gms.web.repository.MemberDAO;
+import com.gms.web.mapper.MemberMapper;
 import com.gms.web.service.MemberService;
 @Service
 public class MemberServiceImpl implements MemberService {
-	@Autowired MemberDAO memberDAO;
+	@Autowired MemberMapper memberDAO;
 	@Override
 	public void add(MemberDTO p) {
 		int stf = Integer.valueOf(new SimpleDateFormat("yyyy").format(new Date()))+1-1900;
@@ -23,8 +23,6 @@ public class MemberServiceImpl implements MemberService {
 		gender=(ssn.substring(7,8).equals("1"))? "man":"woman" ;
 		p.setAge(String.valueOf(stf - Integer.parseInt(ssn.substring(0,2))));
 		p.setGender(gender);
-		System.out.println(p.getAge());
-		System.out.println(p.getGender());
 		memberDAO.insert(p);
 	}
 
@@ -63,7 +61,7 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 	@Override
-	public boolean login(MemberDTO p) {
+	public MemberDTO login(MemberDTO p) {
 		return memberDAO.login(p);
 	}
 

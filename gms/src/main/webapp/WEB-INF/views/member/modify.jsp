@@ -7,7 +7,10 @@
 						<img src="">
 						</td>
 						<td>ID</td>
-						<td>${user.userid}</td>
+						<td>
+						<input type="hidden" name="userid" value="${user.userid}"/>
+						${user.userid}
+						</td>
 					</tr>
 					<tr>
 						<td>이름</td>
